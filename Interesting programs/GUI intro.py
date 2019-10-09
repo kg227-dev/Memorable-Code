@@ -10,9 +10,9 @@ from tkinter import *
  
 window = Tk()
  
-window.title("Welcome to LikeGeeks app")
+window.title("Welcome to Kush's first app")
  
-window.geometry('350x200')
+window.geometry('350x350')
  
 lbl = Label(window, text="Hello")
  
@@ -20,6 +20,6 @@ lbl.grid(column=0, row=0)
  
 btn = Button(window, text="Click Me")
  
-btn.grid(column=1, row=0)
+btn.grid(column=5, row=5)
  
 window.mainloop()
