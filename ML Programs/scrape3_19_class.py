@@ -204,6 +204,7 @@ def getpage(player_page):
 #getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=275")
 #getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=300")
 
+
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?&sort=AR&sdir=1&status=ALL&pos=O&stat1=S_S_2019&jsenabled=1")
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=25")
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=50")
@@ -217,6 +218,10 @@ getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&po
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=250")
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=275")
 getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=300")
+getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=350")
+getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=400")
+getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=450")
+getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=500")
 # write rows and close file
 for i in dataset:
     write.writerow(i)
