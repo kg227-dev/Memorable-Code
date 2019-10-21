@@ -109,6 +109,7 @@ def getpage(player_page):
     
     # get stats
     l_gp=[]
+
     l_points = []
     l_owners=[]
     l_project=[]
@@ -140,6 +141,7 @@ def getpage(player_page):
     
     for row in p_stats:
       l_gp.append(str(row.nextSibling.nextSibling.nextSibling.string))
+      
       l_points.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))
       l_owners.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))
       l_project.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))
