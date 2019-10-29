@@ -130,8 +130,6 @@ def getpage(player_page):
     l_rectd=[]
     l_rec1st=[]
     
-    l_returnyds=[]
-    l_returntd=[]
     
     l_2pt = []
     l_fumble=[]
@@ -162,15 +160,13 @@ def getpage(player_page):
       l_rectd.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))
       l_rec1st.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))
       
-      l_returnyds.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))       
-      l_returntd.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))       
       
       #2pt
       l_2pt.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))       
       l_fumble.append(str(row.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.string))             
       
     
-    transposer = zip(l_names, l_team, l_pos, l_gp, l_points, l_owners, l_project, l_actual, l_passyds, l_passtd, l_passint, l_rushyds, l_rushtd, l_rush1st, l_recepts, l_recyds, l_rectd, l_rec1st, l_returnyds, l_returntd, l_2pt, l_fumble)
+    transposer = zip(l_names, l_team, l_pos, l_gp, l_points, l_owners, l_project, l_actual, l_passyds, l_passtd, l_passint, l_rushyds, l_rushtd, l_rush1st, l_recepts, l_recyds, l_rectd, l_rec1st, l_2pt, l_fumble)
     
     for i in transposer:
         dataset.append(i)
@@ -192,38 +188,49 @@ def getpage(player_page):
 # main
 # make sure to change the league number -- currently 38053 for this season -- and the year -- which is in each page html
 #MAKE SURE TO CHANGE THE YEAR TOO
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?&sort=AR&sdir=1&status=ALL&pos=O&stat1=S_S_2019&jsenabled=1")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=25")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=50")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=75")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=100")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=125")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=150")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=175")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=200")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=225")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=250")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=275")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=300")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=350")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=400")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=450")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=500")
 
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=25")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=50")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=75")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=100")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=125")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=150")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=175")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=200")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=225")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=275")
-#getpage("http://football.fantasysports.yahoo.com/f1/38053/players?status=A&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=PR&sdir=1&count=300")
+#2018 Points
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?&sort=AR&sdir=1&status=ALL&pos=O&stat1=S_S_2018&jsenabled=1")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=25")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=50")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=75")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=100")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=125")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=150")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=175")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=200")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=225")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=250")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=275")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=300")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=325")
+#getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2018&myteam=0&sort=AR&sdir=1&count=350")
+
+#Weeks 1-7
+for i in range(1,8):
+  getpage("https://football.fantasysports.yahoo.com/f1/38053/players?&sort=AR&sdir=1&status=ALL&pos=O&stat1=S_W_" + str(i)+ "&jsenabled=1")
+  for j in range(25,250, 25):
+    getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_W_" + str(i)+ "&myteam=0&sort=AR&sdir=1&count=" + str(j))
+  print("Completed " + str(i))
 
 
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?&sort=AR&sdir=1&status=ALL&pos=O&stat1=S_S_2019&jsenabled=1")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=25")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=50")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=75")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=100")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=125")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=150")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=175")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=200")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=225")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=250")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=275")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=300")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=350")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=400")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=450")
-getpage("https://football.fantasysports.yahoo.com/f1/38053/players?status=ALL&pos=O&cut_type=9&stat1=S_S_2019&myteam=0&sort=AR&sdir=1&count=500")
 # write rows and close file
 for i in dataset:
     write.writerow(i)
